@@ -32,6 +32,7 @@ def app_page_parsing(
 	):
 	output = []
 	####
+	output.append({'app__app_page_url__page_url':page_url})
 	for r in re_url:
 		for m in re.finditer(r, page_url):
 			output.append(m.groupdict())
