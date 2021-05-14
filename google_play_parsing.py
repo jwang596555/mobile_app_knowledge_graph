@@ -26,7 +26,7 @@ re.compile(r'Rated (?P<similar_app__app_rate_score__rate_score>[\d\.]*?) stars o
 ]
 
 
-def page_parsing(
+def app_page_parsing(
 	page_html,
 	page_url,
 	):
@@ -71,7 +71,7 @@ import yan_web_page_download
 page_url = 'https://play.google.com/store/apps/details?id=com.zhiliaoapp.musically.go&showAllReviews=true'
 page_html = yan_web_page_download.download_page_from_url(page_url)
 
-o = page_parsing(
+o = app_page_parsing(
 	page_html,
 	page_url,
 	)
